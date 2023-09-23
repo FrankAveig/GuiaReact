@@ -1,41 +1,164 @@
-# GuiaReact
+# Starter kit React [![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)
 
-Para mantener la consistencia y legibilidad en nuestro código, seguimos una convención específica para el orden de las importaciones. A continuación se detalla el orden recomendado:
+## Índice
 
-1. **Bibliotecas Externas**: Importa primero las bibliotecas o dependencias externas.
-    ```javascript
-    import React from 'react';
-    import axios from 'axios';
-    ```
-
-2. **Funciones y Utilidades**: Importaciones de funciones generales o utilidades.
-    ```javascript
-    import { fetchData } from '../utils/apiHelpers';
-    ```
-
-3. **Constantes**: Importa las constantes que usarás en tu componente o módulo.
-    ```javascript
-    import { API_ENDPOINT, STATUS_CODES } from '../constants/config';
-    ```
-
-4. **Componentes**: Importaciones de componentes, ya sean generales o específicos.
-    ```javascript
-    import MyComponent from '../components/MyComponent';
-    ```
-
-5. **Imágenes y Estilos**: Importa archivos de estilos, imágenes, SVGs, etc., al final.
-    ```javascript
-    import logo from '../assets/logo.svg';
-    import './styles.css';
-    ```
-
-6. **Lazy Imports y Otras Importaciones Dinámicas** (si las usas):
-    ```javascript
-    const DynamicComponent = React.lazy(() => import('../components/DynamicComponent'));
-    ```
+- [Iniciar el proyecto](#iniciar-el-proyecto)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Buenas prácticas de importaciones](#buenas-prácticas-de-importaciones)
 
 ---
+## Iniciar el proyecto
+#### El inicio de proyectos se realizara con Vite. Aquí los pasos a seguir:
 
-Recuerda siempre mantener una línea en blanco entre cada grupo de importaciones para mejorar la legibilidad. Además, es útil agregar comentarios antes de cada grupo si consideras que ayudará a clarificar el propósito de cada bloque.
+<details>
+  <summary>Ver información</summary>
 
-El orden de las importaciones no solo facilita la legibilidad, sino que también ayuda a identificar rápidamente dependencias, utilidades y componentes específicos cuando revisamos el código.
+
+
+###  1. Instalación de Vite
+
+Asegúrate de tener Node.js (>=12.0.0) instalado en tu máquina. Luego, instala Vite globalmente:
+
+```bash
+npm install -g create-vite
+```
+### 2. Crear un nuevo proyecto
+
+Para iniciar un nuevo proyecto de React con Vite:
+```bash
+create-vite my-project --template react
+```
+Reemplaza my-project con el nombre que desees para tu proyecto.
+
+### 3. Navegar al directorio del proyecto
+
+```bash
+cd my-project
+```
+
+### 4. Instalar dependencias
+
+Vite ya ha generado un package.json para tu proyecto. Instala las dependencias iniciales:
+
+```bash
+npm install
+```
+### 5. Correr el proyecto localmente
+
+Usa el siguiente comando para iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+</details>
+
+## Estructura del proyecto
+<details>
+  <summary>Ver información</summary>
+
+<details>
+<summary>📂assets </summary>
+    
+```bash
+Aquí se almacenan todos los recursos gráficos o archivos estáticos que tu aplicación pueda necesitar,
+tales como imágenes, íconos, fuentes tipográficas y videos. Es ideal para mantener todos tus recursos
+en un solo lugar y acceder a ellos fácilmente.
+```
+</details>
+
+<details>
+<summary>📂components </summary>
+
+```bash
+En esta carpeta encontrarás todos los componentes reutilizables y genéricos. Estos componentes pueden
+ser botones, encabezados, pies de página, listas, etc. Son las piezas individuales que juntas construyen
+tus vistas o páginas.
+```
+</details>
+
+<details>
+<summary>📂constans </summary>
+
+```bash
+Aquí se guardan las constantes del proyecto. Pueden ser cosas como rutas formato de datos, códigos de estado, y
+cualquier otro valor que no vaya a cambiar a lo largo de la aplicación y se quiera tener centralizado.
+```
+</details>
+
+<details>
+    
+<summary>📂context </summary>
+
+```bash
+Contiene los Contextos de React que proporcionan una forma de compartir valores como estos entre componentes
+sin tener que pasar explícitamente un prop a través de cada nivel del árbol de componentes.
+```
+</details>
+
+<details>
+    
+<summary>📂hooks </summary>
+
+```bash
+Aquí se almacenan los hooks personalizados. Los hooks son una adición reciente a React que permite usar estado
+y otras características de React sin escribir una clase. Al crear tus propios hooks personalizados, puedes extraer
+lógica de componentes para reutilizarla o separar la lógica compleja de tus componentes.
+```
+</details>
+<details>
+<summary>📂pages </summary>
+
+```bash
+Esta carpeta contiene componentes o vistas asociados a rutas específicas de tu aplicación. Por ejemplo, si tienes
+una ruta /about, podrías tener un componente AboutPage aquí que representa esa vista.
+```
+</details>
+<details>
+<summary>📂services </summary>
+
+```bash
+Dentro de services se almacenan funciones o clases que manejan llamadas a APIs externas o cualquier otro tipo de
+operaciones asíncronas. Esta separación permite que la lógica de tu aplicación no se mezcle con la lógica de las
+peticiones a la red.
+```
+</details>
+<details>
+<summary>📁styles </summary>
+
+```bash
+En styles, se guardan los estilos globales, variables, mixins, o cualquier otro recurso relacionado con el diseño
+y presentación visual de tu aplicación.
+```
+</details>
+<details>
+<summary>📂utils </summary>
+
+```bash
+Aquí puedes colocar cualquier función utilitaria que quieras reutilizar a través de tu aplicación. Pueden ser funciones
+ para formatear fechas, validar formularios, manipular objetos y arrays, entre otros.
+```
+</details>
+
+</details>
+
+## Estándares tecnológicos
+En el desarrollo de nuestros proyectos, establecemos estándares para asegurar la eficiencia, coherencia y calidad del código. Estas herramientas son obligatorias y deben ser utilizadas en el proyecto:
+<details>
+    <summary>Ver información</summary>
+<details>
+<summary>✔ Llamadas a la API: Axios</summary>
+    
+    
+Recomendamos el uso de [Axios](https://github.com/axios/axios) para todas las llamadas a la API. Axios es una biblioteca de JavaScript muy popular que facilita la realización de solicitudes HTTP desde el navegador y Node.js. Algunas de las ventajas de Axios incluyen:
+
+- Manejo automático de transformaciones JSON.
+- Control de solicitudes concurrentes.
+- Protección contra XSRF.
+- Cancelación de solicitudes.
+
+Para instalar Axios:
+```bash
+npm install axios
+```
+</details>
+</details>
