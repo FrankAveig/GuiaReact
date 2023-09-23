@@ -1,4 +1,5 @@
-# Starter kit React [![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)
+# Starter kit React
+[![My Skills](https://skillicons.dev/icons?i=react)]([(https://github.com/FrankAveig/GuiaReact)])
 
 ## Índice
 
