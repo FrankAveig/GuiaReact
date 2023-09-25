@@ -5,7 +5,7 @@
 
 - [Iniciar el proyecto](#iniciar-el-proyecto)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Estándares tecnológicos](#Estándares-tecnológicos)
+- [Estándares tecnológicos](#estandares-tecnologicos)
 
 ---
 ## Iniciar el proyecto
