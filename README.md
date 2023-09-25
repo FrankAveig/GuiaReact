@@ -5,7 +5,7 @@
 
 - [Iniciar el proyecto](#iniciar-el-proyecto)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Buenas prácticas de importaciones](#buenas-prácticas-de-importaciones)
+- [Estándares tecnológicos](#Estándares-tecnológicos)
 
 ---
 ## Iniciar el proyecto
